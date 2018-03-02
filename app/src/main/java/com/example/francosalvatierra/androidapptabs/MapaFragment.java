@@ -39,7 +39,6 @@ public class MapaFragment extends Fragment implements OnMapReadyCallback {
     GoogleMap mGoogleMap;
     MapView mapView;
     View mView;
-    ProgressBar mProgressBar;
 
     public MapaFragment() { }
 
@@ -72,10 +71,6 @@ public class MapaFragment extends Fragment implements OnMapReadyCallback {
             mapView.getMapAsync(this);
 
         }
-
-        mProgressBar = (ProgressBar)this.getActivity().findViewById(R.id.progressBar2);
-        mProgressBar.setVisibility(View.GONE);
-        mProgressBar.setVisibility(View.VISIBLE);
     }
 
     @Override
