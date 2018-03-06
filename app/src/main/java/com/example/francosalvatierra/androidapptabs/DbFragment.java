@@ -1,6 +1,7 @@
 package com.example.francosalvatierra.androidapptabs;
 
 import android.content.Context;
+import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.net.Uri;
@@ -60,7 +61,9 @@ public class DbFragment extends Fragment {
         listview.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-
+                Intent myDataIntent = new Intent(getActivity(), WeatherDataActivity.class);
+                myDataIntent.putExtra("Datos", id);
+                startActivity(myDataIntent);
             }
         });
 

@@ -1,5 +1,8 @@
 package com.example.francosalvatierra.androidapptabs;
 
+import android.app.ActionBar;
+import android.app.Activity;
+import android.app.FragmentTransaction;
 import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
@@ -7,6 +10,7 @@ import android.database.sqlite.SQLiteDatabase;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.design.widget.BottomNavigationView;
+import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -32,22 +36,42 @@ public class WeatherFragment extends Fragment {
     WeatherData data;
     ArrayList<WeatherData> lista = new ArrayList<WeatherData>();
 
+    TabLayout miTab;
+
+    String result;
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
 
         View v = inflater.inflate(R.layout.fragment_weather, container, false);
 
+        //TODO: Consultar si estoy en este tab efectivamente.
+        //Si estoy, entonces hago esto
+
+        //getDataFromDB(v);
+
+        //miTab = this.getActivity().findViewById(R.id.tabs);
+
+    /*if(WeatherFragment.this.getUserVisibleHint())
+    {*/
         if(GuardarHora()){
             getDataFromService();
         }else{
             getDataFromDB(v);
         }
+    //}
 
+        //Si no, no hago nada de esto.
 
         // Inflate the layout for this fragment
         //return inflater.inflate(R.layout.fragment_weather, container, false);
         return v;
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
     }
 
     private void getDataFromDB(View v) {
