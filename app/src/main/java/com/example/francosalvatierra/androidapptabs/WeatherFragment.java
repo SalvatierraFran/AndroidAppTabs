@@ -85,7 +85,7 @@ public class WeatherFragment extends Fragment {
         if(c.moveToLast())
         {
             do{
-                data = new WeatherData(c.getString(1), c.getString(2), c.getString(3), c.getString(4), c.getString(5), c.getString(6));
+                data = new WeatherData(c.getInt(0), c.getString(1), c.getString(2), c.getString(3), c.getString(4), c.getString(5), c.getString(6));
                 lista.add(data);
             }while(c.moveToNext());
         }

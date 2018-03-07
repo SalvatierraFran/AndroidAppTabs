@@ -5,6 +5,7 @@ package com.example.francosalvatierra.androidapptabs.Entities;
  */
 
 public class WeatherData {
+    private Integer id;
     private String ciudad;
     private String desc;
     private String temp;
@@ -12,8 +13,9 @@ public class WeatherData {
     private String max;
     private String humedad;
 
-    public WeatherData(String Ciudad, String Desc, String Temp, String Min, String Max, String Humedad)
+    public WeatherData(Integer Id, String Ciudad, String Desc, String Temp, String Min, String Max, String Humedad)
     {
+        this.id = Id;
         this.ciudad = Ciudad;
         this.desc = Desc;
         this.temp = Temp;
@@ -68,5 +70,13 @@ public class WeatherData {
 
     public void setHumedad(String humedad) {
         this.humedad = humedad;
+    }
+
+    public Integer getId() {
+        return id;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
     }
 }

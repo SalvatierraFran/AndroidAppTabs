@@ -6,6 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:background="@color/Home"
     tools:context="com.example.francosalvatierra.androidapptabs.WeatherDataActivity">
 
     <LinearLayout
@@ -21,6 +22,7 @@
             android:id="@+id/weather_name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:textColor="@color/Blanco"
             android:textSize="30dp"/>
 
     </LinearLayout>
@@ -40,6 +42,7 @@
             android:id="@+id/weather_desc"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:textColor="@color/Blanco"
             android:textSize="30dp"/>
 
     </LinearLayout>
@@ -59,6 +62,7 @@
             android:id="@+id/weather_temp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:textColor="@color/Blanco"
             android:textSize="30dp" />
 
     </LinearLayout>
@@ -79,6 +83,7 @@
             android:id="@+id/weather_tempmin"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:textColor="@color/Blanco"
             android:textSize="30dp"/>
 
     </LinearLayout>
@@ -98,6 +103,7 @@
             android:id="@+id/weather_tempmax"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:textColor="@color/Blanco"
             android:textSize="30dp"/>
 
     </LinearLayout>
@@ -117,6 +123,7 @@
             android:id="@+id/weather_humidity"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:textColor="@color/Blanco"
             android:textSize="30dp" />
 
     </LinearLayout>

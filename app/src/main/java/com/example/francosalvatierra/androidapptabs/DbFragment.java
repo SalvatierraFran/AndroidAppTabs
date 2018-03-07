@@ -49,7 +49,7 @@ public class DbFragment extends Fragment {
 
         if (c.moveToFirst()) {
             do {
-                data = new WeatherData(c.getString(1), c.getString(2), c.getString(3), c.getString(4), c.getString(5), c.getString(6));
+                data = new WeatherData(c.getInt(0), c.getString(1), c.getString(2), c.getString(3), c.getString(4), c.getString(5), c.getString(6));
                 lista.add(data);
             } while (c.moveToNext());
         }
@@ -57,10 +57,10 @@ public class DbFragment extends Fragment {
         WeatherAdapter adap = new WeatherAdapter(this.getContext(), R.layout.row_layout, lista);
         listview.setAdapter(adap);
 
-
         listview.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                id = lista.get(position).getId();
                 Intent myDataIntent = new Intent(getActivity(), WeatherDataActivity.class);
                 myDataIntent.putExtra("Datos", id);
                 startActivity(myDataIntent);
